@@ -70,7 +70,7 @@
           <svg viewBox="0 0 24 24"><path d="M17.6 9.5l1.8-3.1c.1-.2 0-.4-.2-.5-.2-.1-.4 0-.5.2l-1.8 3.1C15.5 8.5 13.8 8.1 12 8.1s-3.5.4-4.9 1.1L5.3 6.1c-.1-.2-.3-.3-.5-.2-.2.1-.3.3-.2.5l1.8 3.1C3.4 11 1.6 13.8 1.5 17h21c-.1-3.2-1.9-6-4.9-7.5zM7 14.4c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9zm10 0c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z"/></svg>
           <span><small id="andSmall">Get it for</small>Android</span></a>
       </div>
-      <p class="note" id="note">Free on iPhone &amp; iPad (iOS 26 or later). Android: all modules free.</p>
+      <p class="note" id="note">Free on iPhone &amp; iPad (iOS 26 or later).<br>Android: <b>beta testing — only for testers</b> (Google Drive download).</p>
     </div>
     <div class="phone" aria-hidden="true"><div class="screen">
       <span class="chip">💬 Chats</span> <span class="chip">🌍 Rooms</span>
@@ -96,7 +96,7 @@
   <div class="steps">
     <div class="card" id="iosSteps"><span class="tag">iPhone &amp; iPad</span>
       <ol id="iosList"></ol></div>
-    <div class="card" id="andSteps"><span class="tag">Android</span>
+    <div class="card" id="andSteps"><span class="tag">Android · Beta testing (only for testers)</span>
       <ol id="andList"></ol>
       <p class="note">iTeam signs you in with an Apple Account — it keeps your chats private without needing your phone number. It's free and needs no Apple device.</p></div>
   </div>
@@ -129,7 +129,7 @@ const ios = document.getElementById("ios"), and = document.getElementById("andro
 ios.href = LINKS.appStoreLive ? LINKS.appStore : LINKS.testFlight;
 if (!LINKS.appStoreLive) document.getElementById("iosSmall").textContent = "Beta on TestFlight ·";
 and.href = LINKS.playLive ? LINKS.play : LINKS.apk;
-document.getElementById("andSmall").textContent = LINKS.playLive ? "Get it on Google Play ·" : "Download APK ·";
+document.getElementById("andSmall").textContent = LINKS.playLive ? "Get it on Google Play ·" : "Beta testing ·";
 if (isIOS) { ios.classList.add("mine"); and.classList.add("ghost"); }
 if (isAndroid) { and.classList.add("mine"); ios.classList.add("ghost"); }
 const li = (html) => `<li>${html}</li>`;
